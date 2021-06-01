@@ -65,7 +65,7 @@ const Listitem = ({ product, onDecrement, onIncrement, setAlert, cart }) => {
           to={`/product-details/${product._id}`}
           className='btn btn-outline-dark btn-sm btn-rounded'
         >
-          view more
+          view
         </Link>
       </div>
     </li>

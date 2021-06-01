@@ -28,7 +28,7 @@ html {
 @media (max-width: 500px) {
   #product-ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
     place-items: center;
   }
 }

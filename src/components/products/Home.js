@@ -57,7 +57,7 @@ const Home = ({
         }
       >
         <div>
-          <ul id='product-ul'>
+          <ul className='list-group' id='product-ul'>
             {products &&
               products.length &&
               products.map((product) => {
