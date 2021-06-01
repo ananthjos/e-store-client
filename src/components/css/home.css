@@ -1,0 +1,34 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+#product-ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+
+.up-arrow {
+  padding: 10px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color: #17a2b8;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  #product-ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}

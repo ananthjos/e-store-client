@@ -1,0 +1,23 @@
+.jumbo {
+  background-image: url("https://images.samsung.com/is/image/samsung/assets/in/p6_gro2/p6_initial_pf/smartphones/All_PF_Smartphones_1440X344_Canvas_non5G.jpg?$ORIGIN_JPG$");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
+  height: 100vh !important;
+  color: cornsilk;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5%;
+  font-family: "PT Serif", serif;
+}
+
+@media (max-width: 500px) {
+  .jumbo {
+    max-width: 100% !important;
+    max-height: 300px !important;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}

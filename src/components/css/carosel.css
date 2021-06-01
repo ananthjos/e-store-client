@@ -1,0 +1,20 @@
+.main-color {
+}
+
+.image {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.myitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px;
+}
+
+@media (max-width: 500px) {
+  .main-color {
+    display: none;
+  }
+}

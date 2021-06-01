@@ -1,0 +1,29 @@
+#personDet {
+  height: 50%;
+}
+#personDet h5 {
+  font-weight: bolder;
+}
+
+#personDet form label {
+  margin-right: 10px;
+}
+
+#personDet form {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.button-display {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 500px) {
+  #personDet form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

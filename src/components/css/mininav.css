@@ -1,0 +1,21 @@
+@media (max-width: 500px) {
+  .mininav {
+    width: 100%;
+    display: inline-block;
+    position: fixed;
+    bottom: 5px;
+  }
+
+  .mininav nav div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  .up-arrow {
+    bottom: 120px;
+  }
+}

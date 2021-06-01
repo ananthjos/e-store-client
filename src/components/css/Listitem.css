@@ -1,0 +1,15 @@
+#product-list {
+  list-style-type: none;
+  cursor: pointer;
+  border: none;
+  max-width: 200px;
+  background-color: #f7f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+  margin: 10px 10px 10px 10px;
+}
+
+#product-img {
+  max-height: 150px;
+  max-width: 150px;
+}

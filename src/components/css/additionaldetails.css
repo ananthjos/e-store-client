@@ -1,0 +1,11 @@
+#adddet-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  color: #000000;
+}
+
+.button-submit {
+  display: flex;
+  justify-content: flex-end;
+}
