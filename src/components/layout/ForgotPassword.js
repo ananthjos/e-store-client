@@ -18,6 +18,7 @@ const ForgotPassword = ({ forgotPassword ,setAlert}) => {
       return setAlert("please enter your email", "info");
     }else {
       forgotPassword(email);
+      // setAlert("link sent to  your registered  email", "info");
       history.push('/')
     }
   };

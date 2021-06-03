@@ -160,27 +160,23 @@ export const getorderHistory = () => async (dispatch) => {
 };
 
 // forgot password
-export const forgotPassword = (email) => async (dispatch) => {
+export const forgotPassword = (email) => async () => {
   try {
-    let customer = await axios.post(`${url}/api/customer/forgot`, {
+    await axios.post(`${url}/api/customer/forgot`, {
       email,
     });
-    let res = await customer.data;
   } catch (error) {
     console.log(error.message);
   }
 };
 
 // resetpassword
-export const resetPassword = (password,resetToken) => async (dispatch) => {
+export const resetPassword = (password, resetToken) => async () => {
   try {
-    let customer = await axios.put(
-      `${url}/api/customer/resetPassword/${resetToken}`,
-      {
+    await axios.put(`${url}/api/customer/resetPassword/${resetToken}`, {
         password,
       }
     );
-    let res = await customer.data;
   } catch (error) {
     console.log(error.message);
   }
