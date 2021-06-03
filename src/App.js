@@ -17,6 +17,8 @@ import ProductDetails from "./components/products/ProductDetails";
 import PrivateRoute from "./authentication/PrivateRoute";
 import NotFound from "./components/layout/Notfound";
 import MiniNav from "./components/layout/MiniNavbar";
+import ForgotPassword from "./components/layout/ForgotPassword";
+import ResetPassword from "./components/layout/ResetPassword";
 
 if (localStorage.getItem("token")) {
   setAuthToken(localStorage.getItem("token"));
@@ -43,6 +45,16 @@ const App = () => {
           <Route exact path='/checkout' component={Checkout}></Route>
           <Route exact path='/customer/register' component={Register}></Route>
           <Route exact path='/customer/login' component={Login}></Route>
+          <Route
+            exact
+            path='/forgotpassword'
+            component={ForgotPassword}
+          ></Route>
+          <Route
+            exact
+            path='/resetpassword/:resetToken'
+            component={ResetPassword}
+          ></Route>
           <PrivateRoute
             exact
             path='/personaldetails'
@@ -61,11 +73,6 @@ const App = () => {
           <PrivateRoute
             exact
             path='/additional-details'
-            component={Account}
-          ></PrivateRoute>
-          <PrivateRoute
-            exact
-            path='/forgotpassword'
             component={Account}
           ></PrivateRoute>
           <PrivateRoute

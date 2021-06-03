@@ -1,0 +1,12 @@
+.mini-pastorders {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .desktop-pastorders {
+    display: none;
+  }
+  .mini-pastorders {
+    display: block;
+  }
+}

@@ -8,7 +8,7 @@ const MiniNavbar = ({ auth, logout, cart }) => {
   return (
     <div className='mininav'>
       <nav>
-        <div className='text-center'>
+        <div className='text-center bg-light p-2'>
           <Link to='/personaldetails'>
             <i className='fas fa-user fa-2x text-dark'></i>
           </Link>

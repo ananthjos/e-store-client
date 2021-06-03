@@ -14,8 +14,17 @@
   max-width: 100px;
 }
 
-#product-ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
+
+
+.mini-table {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .desktop-table {
+    display: none;
+  }
+  .mini-table {
+    display: block;
+  }
 }

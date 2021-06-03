@@ -95,7 +95,7 @@ const Checkout = ({
       <Link className='btn btn-sm mb-2' to='/'>
         <i className='fas fa-arrow-circle-left fa-2x'></i>
       </Link>
-      <table className='table table-striped'>
+      <table className='table table-striped desktop-table'>
         <thead>
           <tr>
             <th>#</th>
@@ -154,6 +154,64 @@ const Checkout = ({
           </tr>
         </tbody>
       </table>
+      {/* responsive checkout */}
+      <table className='table table-striped mini-table'>
+        <thead>
+          <tr>
+            <th>#</th>
+
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items &&
+            items.length > 0 &&
+            items.map((item, index) => {
+              return (
+                <tr key={item._id}>
+                  <td>{index + 1}</td>
+
+                  <td>
+                    <Link to={`/product-details/${item._id}`}>
+                      {item.title.slice(0,9)}
+                    </Link>{" "}
+                  </td>
+                  <td>
+                    <button
+                      className='btn btn-lg'
+                      onClick={() => {
+                        onDecrement(item._id);
+                        updateQuantity(item._id);
+                      }}
+                    >
+                      -
+                    </button>
+                    {item.quantity}
+                    <button
+                      className='btn btn-lg'
+                      onClick={() => {
+                        onIncrement(item);
+                        updateQuantity(item._id);
+                      }}
+                    >
+                      +
+                    </button>
+                  </td>
+                  <td>{item.price}</td>
+                </tr>
+              );
+            })}
+          <tr className='bg-secondary  text-white'>
+            <td>Total</td>
+            <td></td>
+            <td>{quantity}</td>
+            <td>{total}</td>
+          </tr>
+        </tbody>
+      </table>
+      {/*  */}
       <div className='mx-auto'>
         {auth && items.length > 0 && (
           <button

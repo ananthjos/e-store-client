@@ -61,7 +61,7 @@ const Login = ({ customerLogin, auth }) => {
         <Link to='/customer/register'>New User? SignUp</Link>
       </h6>
       <h6 className='text-center mt-3'>
-        <Link to='/'>Forgot Password?</Link>
+        <Link to='/forgotpassword'>Forgot Password?</Link>
       </h6>
     </div>
   );
