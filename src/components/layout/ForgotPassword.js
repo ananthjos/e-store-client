@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import {useHistory} from 'react-router-dom'
 import { forgotPassword, setAlert } from "../../actions/customerActions";
 import "../css/forgotpassword.css";
 
 const ForgotPassword = ({ forgotPassword ,setAlert}) => {
-  const history = useHistory();
   const [email, setEmail] = useState("");
 
   const onChange = (e) => {
@@ -18,8 +16,7 @@ const ForgotPassword = ({ forgotPassword ,setAlert}) => {
       return setAlert("please enter your email", "info");
     }else {
       forgotPassword(email);
-      // setAlert("link sent to  your registered  email", "info");
-      history.push('/')
+      setAlert("link sent to  your registered  email", "info");
     }
   };
   return (
@@ -46,10 +43,6 @@ const ForgotPassword = ({ forgotPassword ,setAlert}) => {
           submit
         </button>
       </form>
-      <p className='text-center mt-3 text-info'>
-        Note :a password reset link will be sent to your registered email
-        address
-      </p>
     </div>
   );
 };
