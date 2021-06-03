@@ -166,7 +166,6 @@ export const forgotPassword = (email) => async (dispatch) => {
       email,
     });
     let res = await customer.data;
-    dispatch(setAlert(res, "info"));
   } catch (error) {
     console.log(error.message);
   }
@@ -182,7 +181,6 @@ export const resetPassword = (password,resetToken) => async (dispatch) => {
       }
     );
     let res = await customer.data;
-    dispatch(setAlert(res,'info'));
   } catch (error) {
     console.log(error.message);
   }
