@@ -69,7 +69,7 @@ const Checkout = ({
   useEffect(() => {}, [items]);
 
   const onOrder = () => {
-    if (
+    if (!address||
       !address.state ||
       !address.pincode ||
       !address.city ||
